@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Service Registration • Free Pizza</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <h1>Register for Our Service</h1>
+    <p>Fill the form, get a pizza</p>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Registration Form</h2>
+
+      <form id="registration-form" novalidate>
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <div class="form-row">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" inputmode="text" aria-describedby="name-error" />
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="yob">Year of birth <span aria-hidden="true">*</span></label>
+            <input id="yob" name="yob" type="text" inputmode="numeric" autocomplete="bday-year" aria-describedby="yob-error" />
+            <p id="yob-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row inline">
+            <input id="us" name="us" type="checkbox" />
+            <label for="us">Do you live in the United States?</label>
+          </div>
+
+          <div class="form-row hidden" id="zip-row">
+            <label for="zip">Zipcode <span aria-hidden="true">*</span></label>
+            <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" aria-describedby="zip-error" />
+            <p id="zip-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password <span aria-hidden="true">*</span></label>
+            <input id="password" name="password" type="password" aria-describedby="password-error" />
+            <p id="password-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="form-row" aria-describedby="pizza-error">
+            <legend>Preferred type of pizza <span aria-hidden="true">*</span></legend>
+            <div class="choice">
+              <input id="pizza-with" type="radio" name="pizza" value="with" />
+              <label for="pizza-with">With pineapple</label>
+            </div>
+            <div class="choice">
+              <input id="pizza-without" type="radio" name="pizza" value="without" />
+              <label for="pizza-without">Without pineapple</label>
+            </div>
+            <div class="choice">
+              <input id="pizza-none" type="radio" name="pizza" value="no" />
+              <label for="pizza-none">I do not like pizza</label>
+            </div>
+            <p id="pizza-error" class="error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit">Submit</button>
+          </div>
+
+          <p id="form-status" aria-live="polite"></p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <small>&copy; 2025 Pizza Service</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
